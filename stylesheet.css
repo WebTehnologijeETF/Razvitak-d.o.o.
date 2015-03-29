@@ -68,7 +68,7 @@
 body{
 
 background: url(slike/blokovi.png);
-background-repeat:none;
+
 background-size:cover;
 }
 
@@ -113,7 +113,7 @@ margin-top:0;
 .introduction{
 width:70%;
 margin-left:15%;
-margin-top:1;
+
 
 background-color:#669933;
 -webkit-border-radius: 4px;
