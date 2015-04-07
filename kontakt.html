@@ -4,6 +4,7 @@
 <TITLE>Kontakt</TITLE>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="skripta.js"> </script>
 </HEAD>
 <BODY>
 
@@ -32,22 +33,22 @@
 <h2> Ostavite nam poruku. </h2>
 
 <div class="contactFormText">
-<p > Ime i prezime 
-<p> Email </p>
+<p > Ime i prezime* 
+<p>  Email* </p>
 <p > Firma </p>
-<p > Poruka </p>
+<p > Poruka* </p>
 </div>
 
 <div class="contactFormInput">
- <p> <input type="text">  </p>
- <p> <input type="text">  </p>
- <p> <input type="text"> </p>
- <textarea name="textArea" rows=1 cols=1> </textarea> 
+ <p> <input type="text" id="nameInput">  </p>
+ <p> <input type="text" id="mailInput">  </p>
+ <p> <input type="text" id="firmInput"> </p>
+ <textarea name="textArea" rows=1 cols=1 id="textArea"> </textarea> 
  
  </div>
  
 <div id="contactFormButtons">
-<p> <input type="submit" value="Pošalji" > <input type="reset" value="Poništi">  </p>
+<p> <input type="submit" value="Pošalji" onclick="validateForm()"> <input type="reset" value="Poništi">  </p>
 </div>
 </form>
 </div>
@@ -55,6 +56,7 @@
  
 
 <div id="footer"><p>Copyright &copy; Almin Halilović</p></div>
+
 
 </BODY
 </HTML>

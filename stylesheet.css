@@ -310,26 +310,24 @@ text-align:left;
 float:left;
 
 
-
 }
 
 .contactFormInput{
-
 
 margin-top:3%;
 margin-right:50%;
 
 }
+
 .contactFormInput input{
 width: 250px;
 }
-#contactFormButtons{
-margin-top:2%;
-}
-.contactFormInput textArea{
+
+.contactFormInput #textArea{
 
 width:250px;
 height:150px;
+resize:none;
 }
  
  
