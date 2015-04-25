@@ -14,10 +14,10 @@
 
 <div id="navigation">
 <ul>
-<li ><a  href="naslovnica.html">Naslovnica </a> </li>
-<li > <a  href="proizvodi.html"> Proizvodi </a> </li>
-<li > <a  href="onama.html"> O nama </a> </li>
-<li > <a  href="kontakt.html">Kontakt </a> </li>
+<li><a onclick="ajaxMenu('naslovnica.html')">Naslovnica </a> </li>
+<li > <a  onclick="ajaxMenu('proizvodi.html')"> Proizvodi </a> </li>
+<li > <a  onclick="ajaxMenu('onama.html')"> O nama </a> </li>
+<li > <a  onclick="ajaxMenu('kontakt.html')">Kontakt </a> </li>
 </ul>
 </div>
 <div class="introduction">
@@ -36,6 +36,8 @@
 <p > Ime i prezime* 
 <p>  Email* </p>
 <p > Firma </p>
+<p> Općina* </p>
+<p> Grad* </p>
 <p > Poruka* </p>
 </div>
 
@@ -43,6 +45,8 @@
  <p> <input type="text" id="nameInput">  </p>
  <p> <input type="text" id="mailInput">  </p>
  <p> <input type="text" id="firmInput"> </p>
+ <p> <input type="text" id="stateInput"> </p>
+ <p> <input type="text" id="cityInput"> </p>
  <textarea name="textArea" rows=1 cols=1 id="textArea"> </textarea> 
  
  </div>

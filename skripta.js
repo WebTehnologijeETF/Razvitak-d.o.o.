@@ -7,6 +7,8 @@ var mailRegex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6
 var name = document.getElementById("nameInput").value;
 var firm = document.getElementById("firmInput").value;
 var mail = document.getElementById("mailInput").value;
+var state = document.getElementById("stateInput").value;
+var city = document.getElementById("cityInput").value;
 var message = document.getElementById("textArea").value;
 message = message.replace(/^\s+/, '').replace(/\s+$/, ''); // da uklonimo sav white space nepotrebni
 var isValid=true;
@@ -35,6 +37,24 @@ else
 document.getElementById("mailInput").setCustomValidity("");
 }
 
+if(state==null || state=="")
+{
+document.getElementById("stateInput").setCustomValidity("Unesite vašu općinu");
+ isValid=false;
+}
+else{
+document.getElementById("stateInput").setCustomValidity("");
+}
+
+if(city==null || city=="")
+{
+document.getElementById("cityInput").setCustomValidity("Unesite vaš grad");
+ isValid=false;
+}
+else
+{
+document.getElementById("cityInput").setCustomValidity("");
+}
 
 if(message==null || message=="")
 {
@@ -48,6 +68,66 @@ else
 document.getElementById("textArea").setCustomValidity("");
 }
 
+if(isValid) // ako je sve do sada validno, moze se provjeriti sa ajaxom validnost postojanja mjesta i opcine
+{
+var requestObject = new XMLHttpRequest();
+        
+		requestObject.onreadystatechange = function()
+        {
+            if(requestObject.status == 200 && requestObject.readyState == 4){
+                var JSONArray = JSON.parse(requestObject.responseText);
+                if(JSONArray.greska == "Nepostojeće mjesto"){
+                    document.getElementById("cityInput").setCustomValidity("Mjesto mora postojati");
+                    isValid = false;
+                }
+                else if(JSONArray.greska == "Nepostojeća općina"){
+                    document.getElementById("stateInput").setCustomValidity("Općina mora postojati");
+                    isValid = false;
+                }
+                else{
+                    document.getElementById("cityInput").setCustomValidity("");
+                    document.getElementById("stateInput").setCustomValidity("");
+                }
+               
+            }
+        }
+        if(requestObject.readyState == 4) return;
+        requestObject.open('GET','http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina=' + state + '&mjesto=' + city, false);
+        requestObject.send();
+		
+
+}
+
+
+
 return isValid;
 }
+
+function ajaxMenu(webpage){
+        var requestObject = new XMLHttpRequest();
+        requestObject.onreadystatechange = function()
+        {
+            if (requestObject.readyState == 4 && requestObject.status == 200)
+            {
+                document.open();
+                document.write(requestObject.responseText);
+                document.close();
+            }
+            if (requestObject.readyState == 4 && requestObject.status == 404)
+            {
+                alert('error');
+				return;
+            }
+        };
+        requestObject.open("GET", webpage, true);
+        requestObject.send();
+    }
+	
+	
+
+	
+	
+
+
+
 
