@@ -278,13 +278,30 @@ background-color: #a7bc7a;
     font-weight: normal;
     padding: 20px 60px;
     text-align: center;
+	margin:0;
 }
 
 #productTable td{
 background-color: rgb(238, 238, 238);
     color: rgb(111, 111, 111);
     padding: 20px 30px;
+	margin:0;
 
+}
+
+#productTable tr{
+margin:0;
+}
+
+#create-product{
+margin-bottom:15px;
+}
+
+
+.ui-dialog .ui-dialog-titlebar{ 
+    background: #a7bc7a url(slike/pattern.png) 50% 50% repeat-x;
+    opacity: 100;
+    filter:Alpha(Opacity=100);  
 }
 
 #mainPart p{
@@ -383,6 +400,8 @@ width:70%;
     margin:15px;
 }
 
+ 
+ 
  
  
 

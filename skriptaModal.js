@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
 window.onload=loadProducts; // da ucita proizvode u tabelu kada se svi elementi na pageu load-aju
-var dialogCreate,dialogEdit, formCreate,formEdit, name, 
-description,
-price,
+var dialogCreate,dialogEdit, formCreate,formEdit, name=$("#nameCreate"), 
+description=$("#descriptionCreate"),
+price=$("#priceCreate"),
 allFields = $( [] ).add( name ).add( description ).add( price ),
       tips = $( ".validateTips" );
 	  
@@ -48,7 +48,7 @@ allFields = $( [] ).add( name ).add( description ).add( price ),
             var productData = JSON.parse(requestObject.responseText);
             var table = document.getElementById('productTable');
             $("#productTable td").remove(); 
-            var columnNameRow = table.insertRow();
+           
            			
                 for (var i = 0; i < productData.length; i++) {
                     var currRow = table.insertRow();
@@ -130,11 +130,7 @@ allFields = $( [] ).add( name ).add( description ).add( price ),
     requestObject.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     requestObject.send("akcija=dodavanje" + "&brindexa=16268&proizvod=" + JSON.stringify(product));
 		
-		$( "#productTable" ).append( "<tr>" +
-          "<td>" + name.val() + "</td>" +
-          "<td>" + description.val() + "</td>" +
-          "<td>" + price.val() + "</td>" +
-        "</tr>" );
+		
 		
         dialogCreate.dialog( "close" );
 		loadProducts();
@@ -204,6 +200,7 @@ dialogCreate = $( "#dialog-form-create" ).dialog({
       close: function() {
         formCreate[ 0 ].reset();
         allFields.removeClass( "ui-state-error" );
+		updateTips("Sva polja su obavezna.");
       }
     });
 
@@ -249,6 +246,7 @@ $( "#create-product" ).button().on( "click", function() {
       close: function() {
         formEdit[ 0 ].reset();
         allFields.removeClass( "ui-state-error" );
+		updateTips("Sva polja su obavezna.");
       }
     });
 	
