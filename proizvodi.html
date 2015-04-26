@@ -3,10 +3,13 @@
 <HEAD>
 <TITLE>Proizvodi</TITLE>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui.css">
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script language="Javascript" type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script language="Javascript" type="text/javascript" src="jquery-ui.js"></script>
 <script src="skriptaStablo.js"> </script>
 <script src="skripta.js"> </script>
+<script src="skriptaModal.js"> </script>
 
 
 </HEAD>
@@ -29,43 +32,62 @@
 <h1> Firma Razvitak d.o.o. se odlikuje nizom kvalitetnih proizvoda koje Vam stavljamo na raspolaganje. U nastavku su prikazani isti zajedno sa pripadnim opisima te cijenama. </h1>
 </div>
 
+
+<div id="dialog-form-create" title="Kreiraj proizvod">
+  <p class="validateTips">Sva polja su obavezna.</p>
+ 
+  <form>
+    <fieldset>
+      <label for="name">Naziv</label>
+      <input type="text" name="name" id="nameCreate"class="text ui-widget-content ui-corner-all">
+      <label for="description">Opis</label>
+      <input type="text" name="descriptionCreate" id="description" class="text ui-widget-content ui-corner-all">
+      <label for="price">Cijena</label>
+      <input type="text" name="price" id="priceCreate" class="text ui-widget-content ui-corner-all">
+ 
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
+
+<div id="dialog-form-edit" title="Izmijeni proizvod">
+  <p class="validateTips">Sva polja su obavezna.</p>
+ 
+  <form>
+    <fieldset>
+      <label for="name">Naziv</label>
+      <input type="text" name="name" id="nameEdit"class="text ui-widget-content ui-corner-all">
+      <label for="description">Opis</label>
+      <input type="text" name="description" id="descriptionEdit" class="text ui-widget-content ui-corner-all">
+      <label for="price">Cijena</label>
+      <input type="text" name="price" id="priceEdit" class="text ui-widget-content ui-corner-all">
+ 
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
+
+
+
+
 <div id="tableDiv">
 
 <table id="productTable">
-<tr> 
 <th> Naziv </th>
-<th colspan="2"> Opis </th>
+<th colspan="1"> Opis </th>
 <th> Cijena </th>
+<th>  </th>
 </tr>
 <tr>
-<td> Naziv1 </td>
-<td colspan="2"> Opis 1 </td>
-<td> Cijena 1 </td>
-</tr>
 
-<tr>
-<td> Naziv2 </td>
-<td colspan="2"> Opis 2 </td>
-<td> Cijena 2 </td>
-</tr>
-<tr>
-<td> Naziv3 </td>
-<td colspan="2"> Opis 3 </td>
-<td> Cijena 3 </td>
-</tr>
-<tr>
-<td> Naziv4 </td>
-<td colspan="2"> Opis 4 </td>
-<td> Cijena 4 </td>
-</tr>
-<tr>
-<td> Naziv5 </td>
-<td colspan="2"> Opis 5 </td>
-<td> Cijena 5 </td>
-</tr>
+
 
 </table>
+<button id="create-product">Kreiraj proizvod</button>
 </div>
+
+
+
 
 <div id="treeDiv">
 <p> Ispod su prikazani proizvodi razvrstani u pripadne kategorije sa pripadnim slikama koje služe kao primjer istih.</p>
@@ -151,5 +173,10 @@
 
 <div id="footer"><p>Copyright &copy; Almin Halilović</p></div>
 
+
+
 </BODY
+
+
+
 </HTML>
