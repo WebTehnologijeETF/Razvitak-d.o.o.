@@ -1,4 +1,4 @@
-$(document).ready(function(){
+﻿$(document).ready(function(){
 
 window.onload=loadProducts; // da ucita proizvode u tabelu kada se svi elementi na pageu load-aju
 var dialogCreate,dialogEdit, formCreate,formEdit, name=$("#nameCreate"), 
@@ -126,7 +126,7 @@ allFields = $( [] ).add( name ).add( description ).add( price ),
         }
     }
 	
-    requestObject.open("POST", url, false);
+    requestObject.open("POST", url, true);
     requestObject.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     requestObject.send("akcija=dodavanje" + "&brindexa=16268&proizvod=" + JSON.stringify(product));
 		
@@ -174,7 +174,7 @@ allFields = $( [] ).add( name ).add( description ).add( price ),
         }
     }
 	
-    requestObject.open("POST", url, false);
+    requestObject.open("POST", url, true);
     requestObject.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     requestObject.send("akcija=promjena" + "&brindexa=16268&proizvod=" + JSON.stringify(product));
 		
@@ -273,7 +273,7 @@ $( "#create-product" ).button().on( "click", function() {
         }
     }
 	
-    requestObject.open("POST", url, false);
+    requestObject.open("POST", url, true);
     requestObject.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     requestObject.send("akcija=brisanje" + "&brindexa=16268&proizvod=" + JSON.stringify(product));
 		
