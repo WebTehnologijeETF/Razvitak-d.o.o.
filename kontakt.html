@@ -5,8 +5,11 @@
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src="skripta.js" type="text/javascript"> </script>
+
 </HEAD>
 <BODY>
+
+<?php include("phpValidation.php"); ?>
 
 <div id="logo">
 <img src="slike/logo.png" alt="logo">
@@ -14,10 +17,10 @@
 
 <div id="navigation">
 <ul>
-<li><a onclick="ajaxMenu('naslovnica.html')">Naslovnica </a> </li>
+<li><a onclick="ajaxMenu('naslovnica.php')">Naslovnica </a> </li>
 <li > <a  onclick="ajaxMenu('proizvodi.html')"> Proizvodi </a> </li>
 <li > <a  onclick="ajaxMenu('onama.html')"> O nama </a> </li>
-<li > <a  onclick="ajaxMenu('kontakt.html')">Kontakt </a> </li>
+<li > <a  onclick="ajaxMenu('kontakt.php')">Kontakt </a> </li>
 </ul>
 </div>
 <div class="introduction">
@@ -29,7 +32,7 @@
 </div>
 
 <div id="contactForm">
-<form action="">
+<form action="phpSubmit.php" method="get">
 <h2> Ostavite nam poruku. </h2>
 
 <div class="contactFormText">
@@ -42,7 +45,7 @@
 </div>
 
 <div class="contactFormInput">
- <p> <input type="text" id="nameInput">  </p>
+ <p> <input type="text" id="nameInput" name="ime" value="<?php if(isset($_REQUEST['name'])) echo $_REQUEST['name']; else echo ""; ?>">  </p>
  <p> <input type="text" id="mailInput">  </p>
  <p> <input type="text" id="firmInput"> </p>
  <p> <input type="text" id="stateInput"> </p>

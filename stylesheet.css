@@ -134,11 +134,11 @@ text-align:center;
 .newsLeft{
 float:left;
 width:45%;
-height:60%;
-margin-top:10%;
+height:auto%;
+margin-top:4%;
 border: 2px solid;
 margin-left:1%;
-margin-bottom:1%;
+
 
 -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -159,11 +159,11 @@ margin-left:10%;
 .newsRight{
  float:right;
  width:45%;
- height:60%;
- margin-top:10%;
+ height:auto;
+ margin-top:4%;
  border: 2px solid;
  margin-right:1%;
- margin-bottom:1%;
+ 
  
  -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
