@@ -99,8 +99,8 @@ var requestObject = new XMLHttpRequest();
 }
 
 
-
-return isValid;
+if(isValid) form.submit();
+//return isValid;
 }
 
 function ajaxMenu(webpage){
@@ -122,6 +122,44 @@ function ajaxMenu(webpage){
         requestObject.open("GET", webpage, true);
         requestObject.send();
     }
+	
+	function setValidity(name, condition)
+	{
+		if(name=='nameInput')
+		{
+			if(condition==true)
+			{
+				document.getElementById("nameInput").setCustomValidity("");
+			}
+			else
+			{
+				document.getElementById("nameInput").setCustomValidity("Unesite ime");
+			}
+		}
+		else if(name=="mailInput")
+		{
+			if(condition==true)
+			{
+				document.getElementById("mailInput").setCustomValidity("");
+			}
+			else
+			{
+				document.getElementById("mailInput").setCustomValidity("Nevalidan mail");
+			}
+		}
+		else if(name=="textArea")
+		{
+			if(condition==true)
+			{
+				document.getElementById("textArea").setCustomValidity("");
+			}
+			else
+			{
+				document.getElementById("textArea").setCustomValidity("Unesite poruku");
+			}
+		}
+		
+	}
 	
 	
 

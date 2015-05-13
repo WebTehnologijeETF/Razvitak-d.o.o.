@@ -134,11 +134,11 @@ text-align:center;
 .newsLeft{
 float:left;
 width:45%;
-height:60%;
-margin-top:10%;
+height:auto%;
+margin-top:4%;
 border: 2px solid;
 margin-left:1%;
-margin-bottom:1%;
+
 
 -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -159,11 +159,11 @@ margin-left:10%;
 .newsRight{
  float:right;
  width:45%;
- height:60%;
- margin-top:10%;
+ height:auto;
+ margin-top:4%;
  border: 2px solid;
  margin-right:1%;
- margin-bottom:1%;
+ 
  
  -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -265,9 +265,8 @@ display: block;
   font-size: 115%;
   overflow: auto;
   width: auto;
-  margin-left:25%;
+  margin: 0 auto;
   margin-top:5%;
-  margin-bottom:3%;
 
 
 }
@@ -297,12 +296,6 @@ margin:0;
 margin-bottom:15px;
 }
 
-
-.ui-dialog .ui-dialog-titlebar{ 
-    background: #a7bc7a url(slike/pattern.png) 50% 50% repeat-x;
-    opacity: 100;
-    filter:Alpha(Opacity=100);  
-}
 
 #mainPart p{
 margin-left:2%;
@@ -400,7 +393,46 @@ width:70%;
     margin:15px;
 }
 
- 
+ .spanErrorClass{
+    visibility: visible;
+    background-color: red;
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    color: #ffffff;
+    display: inline-block;
+}
+#dialog-form-create , #dialog-form-edit{
+     
+     position: absolute;
+	 display:none;
+     left: 35%;
+     top: 40%;
+     width:30%;
+     height:30%;
+     text-align:center;
+     z-index: 1000;
+	 background: #F9F9F9;
+    border: 1px solid #90d93f;
+    color: #222222;
+    outline: 0 none;
+    padding: 0 !important;
+    
+}
+
+#dialogFormCreate form {
+     width:300px;
+     margin: 100px auto;
+     background-color: #fff;
+     border:1px solid #000;
+     padding:15px;
+     text-align:center;
+}
+
+.dialogFormInput{
+ margin-left:5%;
+ margin-bottom:2%;
+}
+
  
  
  
