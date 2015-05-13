@@ -9,6 +9,10 @@
 </HEAD>
 <BODY>
 
+<<<<<<< HEAD
+=======
+<?php include("phpValidation.php"); ?>
+>>>>>>> origin/master
 
 <div id="logo">
 <img src="slike/logo.png" alt="logo">
@@ -31,9 +35,13 @@
 </div>
 
 <div id="contactForm">
+<<<<<<< HEAD
 <?php include('phpValidation.php'); ?>
 		<?php if($_SERVER['REQUEST_METHOD'] == 'POST' && validateAll($_POST['ime'], $_POST['mail'], $_POST['textArea'], $_POST['firm'])){ include('potvrdaPodataka.php'); } ?>
 <form action="kontakt.php" method="post">
+=======
+<form action="phpValidation.php" method="get">
+>>>>>>> origin/master
 <h2> Ostavite nam poruku. </h2>
 
 <div class="contactFormText">
@@ -46,6 +54,7 @@
 </div>
 
 <div class="contactFormInput">
+<<<<<<< HEAD
  <p> <input type="text" id="nameInput" name="ime" <?php if(isFormSubmitted()) echo 'value="' .$_POST['ime'] . '"';?>><span id="nameError" <?php if(isFormSubmitted() && !validateName($_POST['ime'])) echo 'class="spanErrorClass"'; ?>><?php if(isFormSubmitted()){ if(!validateName($_POST['ime'])) echo "Nevalidno ime!"; } ?></span>
  
   </p>
@@ -55,6 +64,15 @@
  <p> <input type="text" id="cityInput"> </p>
  <textarea name="textArea" rows=1 cols=1 id="textArea" <?php if(isFormSubmitted()) echo 'value="' .$_POST['textArea'] . '"';?>> </textarea> <span id="messageError" <?php if(isFormSubmitted() && !validateMessage($_POST['textArea'])) echo 'class="spanErrorClass"'; ?>><?php if(isFormSubmitted()){ if(!validateMessage($_POST['textArea'])) echo "Nevalidna poruka!"; } ?></span>
   
+=======
+ <p> <input type="text" id="nameInput" name="ime">  </p>
+ <p> <input type="text" id="mailInput">  </p>
+ <p> <input type="text" id="firmInput"> </p>
+ <p> <input type="text" id="stateInput"> </p>
+ <p> <input type="text" id="cityInput"> </p>
+ <textarea name="textArea" rows=1 cols=1 id="textArea"> </textarea> 
+ 
+>>>>>>> origin/master
  </div>
  
 <div id="contactFormButtons">

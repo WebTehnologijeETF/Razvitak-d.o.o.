@@ -9,7 +9,11 @@
 </HEAD>
 <BODY>
 
+<<<<<<< HEAD
 
+=======
+<?php include("phpValidation.php"); ?>
+>>>>>>> origin/master
 
 <div id="logo">
 <img src="slike/logo.png" alt="logo">
@@ -32,10 +36,13 @@
 </div>
 
 <div id="contactForm">
+<<<<<<< HEAD
 
 <?php include('phpValidation.php'); ?>
 		<?php if($_SERVER['REQUEST_METHOD'] == 'POST' && validateAll($_POST['ime'], $_POST['mail'], $_POST['message'], $_POST['firm'])){ include('showInputs.php'); }?>
 
+=======
+>>>>>>> origin/master
 <form action="phpSubmit.php" method="get">
 <h2> Ostavite nam poruku. </h2>
 
@@ -49,9 +56,13 @@
 </div>
 
 <div class="contactFormInput">
+<<<<<<< HEAD
  <p> <input type="text" id="nameInput" name="ime" value="<?php if(isset($_POST['ime'])) echo $_POST['ime']; else echo ''; ?>"> 
   <?php if(isset($_POST['ime'])) { if(validacijaIme($_POST['ime'])) { echo ""; } else { echo "greska";} }  ?>
  </p>
+=======
+ <p> <input type="text" id="nameInput" name="ime" value="<?php if(isset($_REQUEST['name'])) echo $_REQUEST['name']; else echo ""; ?>">  </p>
+>>>>>>> origin/master
  <p> <input type="text" id="mailInput">  </p>
  <p> <input type="text" id="firmInput"> </p>
  <p> <input type="text" id="stateInput"> </p>
