@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-29.04.2015. 10:31:44
-=======
-<<<<<<< HEAD
-29.04.2015. 10:31:44
-=======
 28.04.2015. 10:31:44
->>>>>>> origin/master
->>>>>>> origin/master
-Vedran LjuboviÊ
+Vedran Ljubovi√¶
 OVO JE NEKI PRIMJER NOVOSTI
 https://zamger.etf.unsa.ba/images/16x16/zad_ok.png
-Sada Êu napisati neki osnovni tekst.
-Ovaj osnovni tekst se nalazi u viöe redova.
+Sada √¶u napisati neki osnovni tekst.
+Ovaj osnovni tekst se nalazi u vi≈°e redova.
 Lorem ipsum dolor sit amet i tako dalje mrsko mi je da kopiram.
 --
 Ovdje sada slijedi detaljniji tekst novosti. 
