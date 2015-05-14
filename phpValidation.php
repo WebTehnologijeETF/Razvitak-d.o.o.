@@ -17,19 +17,10 @@ function validateMail($mail)
 	
 	return true;	
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
 function validateFirm($firm)
 {
 	return ctype_alnum($firm);
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/master
->>>>>>> origin/master
 
 function validateMessage($message)
 {
@@ -40,10 +31,6 @@ function validateMessage($message)
 	
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
 function isFormSubmitted(){
 	return ($_SERVER['REQUEST_METHOD'] == 'POST');
 }
@@ -53,11 +40,6 @@ function validateAll($ime, $mail, $message, $firm){
 		return true;
 	return false;
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/master
->>>>>>> origin/master
 
 
 
