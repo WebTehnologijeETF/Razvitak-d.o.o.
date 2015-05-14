@@ -50,30 +50,30 @@ for ($i=0; $i<count($news) - 1; $i++) {
         }
     }
 ?>
-
+<?php if($counter%2==0) echo"<div class='newsContainer'>" ?>
  <div class="<?php if($counter%2 == 0) echo "newsLeft"; else echo "newsRight";?>">
 
  
- <?php echo "<p class='author'> Autor: $fileContent[1] </p>"; ?>
- <?php echo "<p class='datePosted'> Objavljeno: $fileContent[0]</p>"; ?>
+ <?php echo "<p class='author'> Autor: " .htmlentities($fileContent[1],ENT_QUOTES). "</p>"; ?>
+ <?php echo "<p class='datePosted'> Objavljeno: " .htmlentities($fileContent[0],ENT_QUOTES)."</p>"; ?>
  
  <?php if($fileContent[3] != "\r\n"): ?>
 	 
-	 <?php echo " <img src='$fileContent[3]' alt='Slika'>"; ?>
+	 <?php echo " <img src='".htmlentities($fileContent[3],ENT_QUOTES)."' alt='Slika'>"; ?>
 	 
-	<?php echo "<h2 ><a href='" . $fileContent[3] . "' title='Slika'></a></h2>"; ?>
+	<?php echo "<h2 ><a href='" .htmlentities($fileContent[3],ENT_QUOTES)."' title='Slika'></a></h2>"; ?>
 	 	
     <?php endif; ?>
  
- <?php echo "<h3>" . ucfirst(strtolower($fileContent[2])) . "</h3>";?>
+ <?php echo "<h3>" . ucfirst(strtolower(htmlentities($fileContent[2],ENT_QUOTES))) . "</h3>";?>
 	
- 	<?php echo " <p>$description</p>"; ?>
+ 	<?php echo " <p>".htmlentities($description,ENT_QUOTES)."</p>"; ?>
 	
 	
 	<?php if($detailsExist == true): ?>
 	<details >
                 <summary>Detaljnije</summary>
-					<?php echo " $details"; ?>
+					<?php echo htmlentities($details,ENT_QUOTES); ?>
                
             </details>
 	     <?php endif; ?>	
@@ -81,12 +81,9 @@ for ($i=0; $i<count($news) - 1; $i++) {
 
 </div>
 
-<?php if($counter%2!=0): ?>
-<?php echo "<br/>"; ?>
-<?php endif; ?>
-<?php	
-	endfor;
-?>
+<?php if($counter%2!=0) echo"</div>" ?>
+
+<?php	endfor;?>
 
 </div>
 
