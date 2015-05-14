@@ -6,12 +6,12 @@ $message = strip_tags($_POST['textArea']);
 $firm = strip_tags($_POST['firm']);
 
  $txt = 'Ime: ' . $ime . "\r\n" . 'Email: ' . $mail . "\r\n" . 'Firma: ' . $firm . "\r\n" . 'Poruka: ' . $message;
-$headers = 'From: ahalilovic5@etf.unsa.ba CC: almin.halilovic@hotmail.com' . "\r\n" . 'Reply-To: ' . $mail;
+$headers = 'From: ahalilovic5@etf.unsa.ba CC: vljubovic@etf.unsa.ba' . "\r\n" . 'Reply-To: ' . $mail;
 
 $url = 'https://api.sendgrid.com/';
 $user = 'Jhr1Ie5JRQ';
 $pass = 'Vda6dFVVLp';
-$cc = 'almin.halilovic@hotmail.com';
+$cc = 'vljubovic@etf.unsa.ba';
 $params = array(
     'api_user'  => $user,
     'api_key'   => $pass,
@@ -39,8 +39,8 @@ curl_close($session);
 // print everything out
 print_r($response);
 $json_response = json_decode($response, true);
-if($json_response["message"] == "success") header("Location: index.php?poslan=da");
-else header("Location: index.php?poslan=ne");
+if($json_response["message"] == "success") header("Location: index.php");
+else header("Location: index.php");
 						
 
 ?>
