@@ -1,8 +1,8 @@
 <?php
 
-$ime = $_POST['ime'];
-$mail = $_POST['mail'];
-$message = $_POST['textArea'];
+$ime = htmlentities($_POST['ime'],ENT_QUOTES);
+$mail = htmlentities($_POST['mail'],ENT_QUOTES);
+$message = htmlentities($_POST['textArea'],ENT_QUOTES);
 $firm = $_POST['firm'];
 echo          '<div id="confirmationDiv">';
 echo		 '<p class="h2Style">Provjerite da li ste ispravno unijeli podatke:</p>';

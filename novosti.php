@@ -38,7 +38,7 @@ for ($i=0; $i<count($news) - 1; $i++) {
 	$details = "";
     $description="";
     for ($j=4; $j<count($fileContent);$j++) {
-        if($fileContent[$j] == "--\r\n") {
+        if(trim($fileContent[$j]) === "--") {
             $detailsExist = true;
             continue;
         }
@@ -67,7 +67,7 @@ for ($i=0; $i<count($news) - 1; $i++) {
  
  <?php echo "<h3>" . ucfirst(strtolower(htmlentities($fileContent[2],ENT_QUOTES))) . "</h3>";?>
 	
- 	<?php echo " <p>".htmlentities($description,ENT_QUOTES)."</p>"; ?>
+ 	<?php echo " <p>".$description."</p>"; ?>
 	
 	
 	<?php if($detailsExist == true): ?>
