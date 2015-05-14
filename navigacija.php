@@ -3,4 +3,8 @@
 <li > <a  onclick="ajaxMenu('proizvodi.php')"> Proizvodi </a> </li>
 <li > <a  onclick="ajaxMenu('onama.php')"> O nama </a> </li>
 <li > <a  onclick="ajaxMenu('kontakt.php')">Kontakt </a> </li>
+<<<<<<< HEAD
 </ul>
+=======
+</ul>
+>>>>>>> origin/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -5,6 +6,9 @@
 </head>
 <div id="mainPart">
 <body>
+=======
+<div id="mainPart">
+>>>>>>> origin/master
 <?php 
 
 
@@ -18,7 +22,11 @@ for ($i=2; $i<count($files); $i++) {
     array_push($dates, $tempDate[0]);
 	array_push($news, $files[$i]);
 }
+<<<<<<< HEAD
 // bubble sort zbog zahtjeva o sortiranju novosti po datumu
+=======
+
+>>>>>>> origin/master
 for ($i=0; $i<count($news) - 1; $i++) {
         if (new DateTime($dates[$i]) < new DateTime($dates[$i+1])) {
             $temp = $dates[$i+1];
@@ -61,7 +69,11 @@ for ($i=0; $i<count($news) - 1; $i++) {
 	 
 	 <?php echo " <img src='$fileContent[3]' alt='Slika'>"; ?>
 	 
+<<<<<<< HEAD
 	<?php echo "<h2 ><a href='" . $fileContent[3] . "' title='Slika'></a></h2>"; ?>
+=======
+	<?php echo "<h2 ><a href='" . $fileContent[3] . "' title='slikica'></a></h2>"; ?>
+>>>>>>> origin/master
 	 	
     <?php endif; ?>
  
@@ -89,6 +101,9 @@ for ($i=0; $i<count($news) - 1; $i++) {
 ?>
 
 </div>
+<<<<<<< HEAD
 
 </body>
 </html>
+=======
+>>>>>>> origin/master

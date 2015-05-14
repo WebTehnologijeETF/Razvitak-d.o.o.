@@ -29,4 +29,8 @@
 <div id="footer"><p>Copyright &copy; Almin Halilović</p></div>
 
 </BODY
+<<<<<<< HEAD
 </HTML>
+=======
+</HTML>
+>>>>>>> origin/master

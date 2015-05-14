@@ -45,4 +45,8 @@
 <div id="footer"><p>Copyright &copy; Almin Halilović</p></div>
 
 </BODY
+<<<<<<< HEAD:onama.php
 </HTML>
+=======
+</HTML>
+>>>>>>> origin/master:onama.php

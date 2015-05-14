@@ -195,4 +195,8 @@
 
 
 
+<<<<<<< HEAD
 </HTML>
+=======
+</HTML>
+>>>>>>> origin/master

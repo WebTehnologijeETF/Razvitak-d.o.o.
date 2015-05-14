@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 29.04.2015. 10:31:44
+=======
+<<<<<<< HEAD
+29.04.2015. 10:31:44
+=======
+28.04.2015. 10:31:44
+>>>>>>> origin/master
+>>>>>>> origin/master
 Vedran Ljuboviæ
 OVO JE NEKI PRIMJER NOVOSTI
 https://zamger.etf.unsa.ba/images/16x16/zad_ok.png
