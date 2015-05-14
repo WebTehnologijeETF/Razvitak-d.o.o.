@@ -9,29 +9,13 @@
 </HEAD>
 <BODY>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<?php include("phpValidation.php"); ?>
->>>>>>> origin/master
->>>>>>> origin/master
 
 <div id="logo">
 <img src="slike/logo.png" alt="logo">
 </div>
 
 <div id="navigation">
-<<<<<<< HEAD
 <?php include('navigacija.php');?>
-=======
-<ul>
-<li><a onclick="ajaxMenu('naslovnica.html')">Naslovnica </a> </li>
-<li > <a  onclick="ajaxMenu('proizvodi.html')"> Proizvodi </a> </li>
-<li > <a  onclick="ajaxMenu('onama.html')"> O nama </a> </li>
-<li > <a  onclick="ajaxMenu('kontakt.html')">Kontakt </a> </li>
-</ul>
->>>>>>> origin/master
 </div>
 <div class="introduction">
 <h2> Dostupni smo putem sljedećih kontakt podataka: </h2>
@@ -42,19 +26,9 @@
 </div>
 
 <div id="contactForm">
-<<<<<<< HEAD
 <?php include('phpValidation.php'); ?>
 		<?php if($_SERVER['REQUEST_METHOD'] == 'POST' && validateAll($_POST['ime'], $_POST['mail'], $_POST['textArea'], $_POST['firm'])){ include('potvrdaPodataka.php'); } ?>
 <form action="kontakt.php" method="post">
-=======
-<<<<<<< HEAD
-<?php include('phpValidation.php'); ?>
-		<?php if($_SERVER['REQUEST_METHOD'] == 'POST' && validateAll($_POST['ime'], $_POST['mail'], $_POST['textArea'], $_POST['firm'])){ include('potvrdaPodataka.php'); } ?>
-<form action="kontakt.php" method="post">
-=======
-<form action="phpValidation.php" method="get">
->>>>>>> origin/master
->>>>>>> origin/master
 <h2> Ostavite nam poruku. </h2>
 
 <div class="contactFormText">
@@ -67,10 +41,6 @@
 </div>
 
 <div class="contactFormInput">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
  <p> <input type="text" id="nameInput" name="ime" <?php if(isFormSubmitted()) echo 'value="' .$_POST['ime'] . '"';?>><span id="nameError" <?php if(isFormSubmitted() && !validateName($_POST['ime'])) echo 'class="spanErrorClass"'; ?>><?php if(isFormSubmitted()){ if(!validateName($_POST['ime'])) echo "Nevalidno ime!"; } ?></span>
  
   </p>
@@ -80,18 +50,6 @@
  <p> <input type="text" id="cityInput"> </p>
  <textarea name="textArea" rows=1 cols=1 id="textArea" <?php if(isFormSubmitted()) echo 'value="' .$_POST['textArea'] . '"';?>> </textarea> <span id="messageError" <?php if(isFormSubmitted() && !validateMessage($_POST['textArea'])) echo 'class="spanErrorClass"'; ?>><?php if(isFormSubmitted()){ if(!validateMessage($_POST['textArea'])) echo "Nevalidna poruka!"; } ?></span>
   
-<<<<<<< HEAD
-=======
-=======
- <p> <input type="text" id="nameInput" name="ime">  </p>
- <p> <input type="text" id="mailInput">  </p>
- <p> <input type="text" id="firmInput"> </p>
- <p> <input type="text" id="stateInput"> </p>
- <p> <input type="text" id="cityInput"> </p>
- <textarea name="textArea" rows=1 cols=1 id="textArea"> </textarea> 
- 
->>>>>>> origin/master
->>>>>>> origin/master
  </div>
  
 <div id="contactFormButtons">
