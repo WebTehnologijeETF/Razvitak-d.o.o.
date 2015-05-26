@@ -101,6 +101,7 @@ var requestObject = new XMLHttpRequest();
 
 if(isValid) form.submit();
 //return isValid;
+<<<<<<< HEAD
 }
 
 
@@ -149,6 +150,8 @@ document.getElementById("textArea").setCustomValidity("");
 
 if(isValid) form.submit();
 
+=======
+>>>>>>> origin/master
 }
 
 
