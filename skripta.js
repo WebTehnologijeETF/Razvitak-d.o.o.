@@ -92,16 +92,67 @@ var requestObject = new XMLHttpRequest();
             }
         }
         if(requestObject.readyState == 4) return;
-        requestObject.open('GET','http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina=' + state + '&mjesto=' + city, false);
+        requestObject.open('GET','http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina=' + state + '&mjesto=' + city, true);
         requestObject.send();
 		
 
 }
 
 
-
-return isValid;
+if(isValid) form.submit();
+//return isValid;
 }
+
+
+function validateFormComment()
+{
+	var mailRegex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    
+var name = document.getElementById("nameInput").value;
+var mail = document.getElementById("mailInput").value;
+var message = document.getElementById("textArea").value;
+
+message = message.replace(/^\s+/, '').replace(/\s+$/, ''); // da uklonimo sav white space nepotrebni
+var isValid=true;
+    if ( document.getElementById("nameInput").value=="") {
+		document.getElementById("nameInput").setCustomValidity("Unesite vaše ime");
+		
+		isValid=false;
+}
+else
+{
+document.getElementById("nameInput").setCustomValidity("");
+}
+
+ if( mail!=null && mail!="" &&!mailRegex.test(mail))
+{
+document.getElementById("mailInput").setCustomValidity("Unesite pravilnu mail adresu");
+isValid=false;
+}
+else
+{
+document.getElementById("mailInput").setCustomValidity("");
+}
+
+
+if(message==null || message=="")
+{
+document.getElementById("textArea").setCustomValidity("Unesite vaš komentar");
+
+isValid=false;
+}
+else
+{
+
+document.getElementById("textArea").setCustomValidity("");
+}
+
+if(isValid) form.submit();
+
+}
+
+
+
 
 function ajaxMenu(webpage){
         var requestObject = new XMLHttpRequest();
@@ -122,6 +173,44 @@ function ajaxMenu(webpage){
         requestObject.open("GET", webpage, true);
         requestObject.send();
     }
+	
+	function setValidity(name, condition)
+	{
+		if(name=='nameInput')
+		{
+			if(condition==true)
+			{
+				document.getElementById("nameInput").setCustomValidity("");
+			}
+			else
+			{
+				document.getElementById("nameInput").setCustomValidity("Unesite ime");
+			}
+		}
+		else if(name=="mailInput")
+		{
+			if(condition==true)
+			{
+				document.getElementById("mailInput").setCustomValidity("");
+			}
+			else
+			{
+				document.getElementById("mailInput").setCustomValidity("Nevalidan mail");
+			}
+		}
+		else if(name=="textArea")
+		{
+			if(condition==true)
+			{
+				document.getElementById("textArea").setCustomValidity("");
+			}
+			else
+			{
+				document.getElementById("textArea").setCustomValidity("Unesite poruku");
+			}
+		}
+		
+	}
 	
 	
 
