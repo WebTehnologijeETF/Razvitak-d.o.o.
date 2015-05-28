@@ -1,0 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['username']))
+{
+	session_unset();
+     header("Location:prijava.php");
+}
+else
+{
+	 header("Location:prijava.php");
+}
+?>
