@@ -7,7 +7,8 @@
 <body>
 <?php 
 
- $veza = new PDO("mysql:dbname=razvitak;host=localhost;charset=utf8", "root", "");
+     $veza = new PDO("mysql:dbname=razvitak;host=localhost;charset=utf8", "root", "");
+	// $veza= new PDO("mysql:dbname=almin;host=http://almin-razvitak.rhcloud.com/;charset=utf8","adminXGlP9gh","almin");
      $veza->prepare("set names utf8");
      $rezultat = $veza->prepare("select id, naslov, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, imaDetalja,detalji,slika from vijest order by vrijeme desc");
      $rezultat->execute();    
@@ -17,8 +18,6 @@
           exit();
      }
 
-//$files = scandir("novosti");
-//$dates = array();
 $news = array();
 foreach($rezultat as $novost)
 {
@@ -77,8 +76,8 @@ $counter=0;
 	     <?php endif; ?>	
 		 
 		 
-		  <?php	if($broj==0) print "<p><small> Nema komentara </small> </p>";
-        else print "<p><small> <a  href=\"#\" onclick=\"ajaxMenu('komentari.php?vijest=".$fileContent['id']."');\">".$broj. " ".$tekst." </small> </a> </p>"; ?>
+		  <?php	//if($broj==0) print "<p><small> Nema komentara </small> </p>";
+         print "<p><small> <a  href=\"#\" onclick=\"ajaxMenu('komentari.php?vijest=".$fileContent['id']."');\">".$broj. " ".$tekst." </small> </a> </p>"; ?>
    
 		 
  

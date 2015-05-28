@@ -33,6 +33,7 @@ if(isset($_POST['inputText']) && isset($_POST['inputAutor']))
 	
 	
      $veza = new PDO("mysql:dbname=razvitak;host=localhost;charset=utf8", "root", "");
+	 //$veza= new PDO("mysql:dbname=almin;host=http://almin-razvitak.rhcloud.com/;charset=utf8","adminXGlP9gh","almin");
      $veza->exec("set names utf8");
      $rezultat = $veza->query("INSERT INTO komentar SET vijest='".htmlspecialchars($_REQUEST['vijest'],ENT_QUOTES,'utf-8')."', tekst='" .htmlspecialchars($tekst,ENT_QUOTES,'utf-8')."', autor='".htmlspecialchars($autor,ENT_QUOTES,'utf-8')."', mail='".htmlspecialchars($mail,ENT_QUOTES,'utf-8')."';");
      if (!$rezultat) {
